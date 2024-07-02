@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
   selector: 'auth-login',
   standalone: true,
   imports: [
-    RouterModule
+    RouterModule,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'

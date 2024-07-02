@@ -44,7 +44,7 @@ $font-family-poppins: 'Poppins', 'Open Sans', Arial;
 
     .card__container {
         position: relative;
-        top: -58px;
+        top: -78px;
         left: 0;
         width: 85%;
         padding: 20px;
@@ -73,7 +73,7 @@ $font-family-poppins: 'Poppins', 'Open Sans', Arial;
                 font-family: $font-family-open-sans;
                 font-size: 14px;
                 font-weight: normal;
-                color: rgba(0, 0, 0, .8);
+                color: rgba(0, 0, 0, .7);
                 border: 1.5px solid rgba(0, 0, 0, .1);
                 box-shadow: 5px 10px 30px rgba(98, 84, 255, .2);
                 outline: none;
@@ -156,7 +156,7 @@ $font-family-poppins: 'Poppins', 'Open Sans', Arial;
         .login__logo {
             position: relative;
             top: 0;
-            left: 100px;
+            left: 70px;
             grid-area: 'logo';
             height: 500px;
             border-radius: 0% 50% 50% 0%;
@@ -191,11 +191,12 @@ $font-family-poppins: 'Poppins', 'Open Sans', Arial;
 }
 
 @media (min-width: 1200px) {
+
     .login__container {
         width: 900px;
 
         .login__logo {
-            left: 160px;
+            left: 90px;
 
             .logo__img {
                 left: 170px;
@@ -203,7 +204,11 @@ $font-family-poppins: 'Poppins', 'Open Sans', Arial;
         }
 
         .btn__login {
-            left: 113px;
+            left: 84px;
+        }
+
+        .card__container {
+            left: -100px;
         }
     }
 }
