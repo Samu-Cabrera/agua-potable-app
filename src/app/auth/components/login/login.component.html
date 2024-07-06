@@ -3,7 +3,11 @@
          <div class="logo__img"></div>
     </div>
 
-    <div>
+    <form 
+        [formGroup] = "loginForm"
+        autocomplete="off"
+        (ngSubmit)="onSubmit()">
+
         <div class="card__container">
             <h2 class="card__title">
                 Log In
@@ -11,9 +15,25 @@
     
             <div class="card__body">
                 <div class="card__inputs">
-                    <input type="number" placeholder="Cédula de Identidad">
+                    <input 
+                        type="number" 
+                        placeholder="Cédula de Identidad"
+                        formControlName="cedula">
+                        @if (isValidField('cedula')) {
+                            <span class="input__error">
+                                {{ getFieldError('cedula') }}
+                            </span>
+                        }
                     <div class="input__password">
-                        <input type="password" placeholder="Contraseña">
+                        <input 
+                            type="password" 
+                            placeholder="Contraseña"
+                            formControlName="password">
+                        @if(isValidField('password')){
+                            <span class="input__error">
+                                {{ getFieldError('password') }}
+                            </span>
+                        }
                     </div>
                 </div>
     
@@ -23,10 +43,13 @@
                 </button>
             </div>
         </div>
-        <button class="btn__login">
+        <button 
+            type="submit"
+            class="btn__login"
+            >
             Iniciar Sesión
             <i class="ri-arrow-right-line"></i>
         </button>
-    </div>
+    </form>
 
 </div>

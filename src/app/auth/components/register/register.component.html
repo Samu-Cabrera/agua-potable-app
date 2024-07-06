@@ -17,6 +17,10 @@
                     <input type="text" placeholder="Nombre">
                     <input type="text" placeholder="Apellido">
                 </div>
+                <button class="btn__login">
+                    <i class="ri-radio-button-line"></i>
+                    Iniciar Sesión
+                </button>
             </div>
         </div>
         <div 
@@ -27,6 +31,10 @@
                     <input type="number" placeholder="Cédula de identidad">
                     <input type="text" placeholder="Dirección">
                 </div>
+                <button class="btn__login">
+                    <i class="ri-radio-button-line"></i>
+                    Iniciar Sesión
+                </button>
             </div>
         </div>
         <div 
@@ -36,12 +44,25 @@
                 <div class="card__inputs">
                     <input type="number" placeholder="Teléfono">
                     <div class="select">
-                        <p>Tipo de medidor</p>
-                        <button class="btn__show">
+                        <p>
+                            {{ opcionValue | titlecase }}
+                        </p>
+                        <button 
+                            [ngClass]="{'active': btnShow === false}"
+                            class="btn__show"
+                            (click)="showBtn()">
                             <i class="ri-arrow-down-s-line"></i>
                         </button>
+                        <button 
+                            [ngClass]="{'active': btnShow === true}"
+                            class="btn__show"
+                            (click)="hideBtn()">
+                            <i class="ri-arrow-up-s-line"></i>
+                        </button>
 
-                        <ul class="opcion__container">
+                        <ul 
+                            [ngClass]="{'show': btnShow === true}"
+                            class="opcion__container">
                             <li
                                 [ngClass]="{'active1': selectItem === 0}" 
                                 class="opcion__item item1"
@@ -59,6 +80,10 @@
                         </ul>
                     </div>
                 </div>
+                <button class="btn__login">
+                    <i class="ri-radio-button-line"></i>
+                    Iniciar Sesión
+                </button>
             </div>
         </div>
         <div 
@@ -69,6 +94,11 @@
                     <input type="text" placeholder="Correo">
                     <input type="password" placeholder="Contraseña">
                 </div>
+
+                <button class="btn__login">
+                    <i class="ri-radio-button-line"></i>
+                    Iniciar Sesión
+                </button>
             </div>
         </div>
 
@@ -87,57 +117,6 @@
                 <i class="ri-arrow-right-s-line"></i>
             </button>
         </div>
-    
     </div>
-    <!-- titulo  -->
 </div>
 
-<!-- <div class="card__container">
-    <div 
-        [ngClass]="{'active': selectIndex === 0}"
-        class="card">
-        <h2>
-            card1
-        </h2>
-        <button (click)="onNextCard()">
-            Next
-        </button>
-    </div>
-    <div 
-        class="card"
-        [ngClass]="{'active': selectIndex === 1}">
-        <h2>
-            card2
-        </h2>
-
-        <button (click)="onPrevCard()">
-            Prev
-        </button>
-        <button (click)="onNextCard()">
-            Next
-        </button>
-        
-    </div>
-    <div 
-        [ngClass]="{'active': selectIndex === 2}"
-        class="card">
-        <h2>Card3</h2>
-        <button (click)="onPrevCard()">
-            Prev
-        </button>
-        <button (click)="onNextCard()">
-            Next
-        </button>
-    </div>
-    <div 
-        [ngClass]="{'active': selectIndex === 3}"
-        class="card">
-        <h2>Card4</h2>
-        <button (click)="onPrevCard()">
-            Prev
-        </button>
-        <button>
-            Submit
-        </button>
-    </div>
-</div> -->

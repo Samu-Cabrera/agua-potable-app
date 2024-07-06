@@ -63,7 +63,7 @@ $font-family-poppins: 'Poppins', 'Open Sans', Arial;
         }
 
         .card__inputs {
-            width: 100%;
+            width: 300px;
 
             input {
                 width: 100%;
@@ -81,9 +81,14 @@ $font-family-poppins: 'Poppins', 'Open Sans', Arial;
                 
                 &:focus {
                     transform: scale(1.05);
-                    border: 2px solid $color-blue-light;
+                    outline: 1px solid $color-blue-light;
                     transition: ease-in-out .1s;
                 }
+            }
+
+            input[type=number]::-webkit-outer-spin-button,
+            input[type=number]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
             }
         }
 
@@ -169,7 +174,7 @@ $font-family-poppins: 'Poppins', 'Open Sans', Arial;
 
         .card__container {
             top: 20px;
-            left: -63px;
+            left: -78px;
             width: 100%;
             grid-area: 'card';
 
@@ -183,7 +188,7 @@ $font-family-poppins: 'Poppins', 'Open Sans', Arial;
 
         .btn__login {
             top: 60px;
-            left: 70px;
+            left: 90px;
             margin-bottom: 10px;
         }
 
